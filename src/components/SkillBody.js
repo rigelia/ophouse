@@ -13,9 +13,7 @@ const SkillBody = () => {
         {' > '} Java <br />
         {' > '} Python <br />
         {' > '} Photography <br />
-        {' > '} Image Processing
-
-
+        {' > '} Image Processing <br />
       </p>
     </div>
   )

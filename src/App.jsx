@@ -16,7 +16,7 @@ function App () {
   useEffect(() => {
     const handleScroll = () => {
       const container = containerRef.current
-      const triggerPoint = container.scrollHeight - container.clientHeight - 100 // 100px from the bottom
+      const triggerPoint = container.scrollHeight - container.clientHeight - 100 
 
       if (container.scrollTop >= triggerPoint) {
         container.style.overflowY = 'auto'
@@ -34,36 +34,38 @@ function App () {
   }, [])
 
   return (
-    <div
-      ref={containerRef}
-      className='scrollable-container flex flex-col min-h-screen justify-center items-center p-4 mx-4 md:mx-8 max-w-screen-lg'
-    >
-      <div className='flex flex-col md:flex-row w-full'>
-        <div className='flex flex-col flex-1 justify-start'>
-          <Intro className='self-start w-full md:w-1/2 lg:w-1/3' />
-          <BodyText className='w-full md:w-1/2 lg:w-1/3' />
+    <div className='flex justify-center items-center min-h-screen'>
+      <div
+        ref={containerRef}
+        className='scrollable-container flex flex-col min-h-screen justify-center items-center p-4 mx-4 md:mx-8 max-w-screen-lg'
+      >
+        <div className='flex flex-col md:flex-row w-full'>
+          <div className='flex flex-col flex-1 justify-start'>
+            <Intro className='self-start w-full md:w-1/2 lg:w-1/3' />
+            <BodyText className='w-full md:w-1/2 lg:w-1/3' />
+          </div>
+          <div className='h-16'></div> {/* Spacer div with height */}
+          <Gallery
+            images={imageUrls}
+            interval={7500}
+            className='w-full md:w-1/2 lg:w-1/3 md:ml-4' 
+          />
         </div>
-        <Gallery
-          images={imageUrls}
-          interval={7500}
-          className='w-full md:w-1/2 lg:w-1/3 md:ml-4'
-        />
-      </div>
-
-      <div className='flex flex-col md:flex-row w-full'>
-        <ExperienceHeader className='self-start w-full md:w-1/2 lg:w-1/3' />
-      </div>
-      <div className='flex flex-col md:flex-row w-full'>
-        <ExperienceBody className='w-full md:w-1/2 lg:w-1/3' />
-      </div>
-      <div className='flex flex-col md:flex-row w-full'>
-        <SkillHeader />
-      </div>
-      <div className='flex flex-col md:flex-row w-full'>
-        <SkillBody />
-      </div>
-      <div className='flex flex-col md:flex-row w-full'>
-        <Socials />
+        <div className='flex flex-col md:flex-row w-full'>
+          <ExperienceHeader className='self-start w-full md:w-1/2 lg:w-1/3' />
+        </div>
+        <div className='flex flex-col md:flex-row w-full'>
+          <ExperienceBody className='w-full md:w-1/2 lg:w-1/3' />
+        </div>
+        <div className='flex flex-col md:flex-row w-full'>
+          <SkillHeader className='self-start w-full md:w-1/2 lg:w-1/3' />
+        </div>
+        <div className='flex flex-col md:flex-row w-full'>
+          <SkillBody className='w-full md:w-1/2 lg:w-1/3' />
+        </div>
+        <div className='flex flex-col md:flex-row w-full'>
+          <Socials className='w-full md:w-1/2 lg:w-1/3' />
+        </div>
       </div>
     </div>
   )
