@@ -14,6 +14,8 @@ function App () {
   const containerRef = useRef(null)
 
   useEffect(() => {
+    document.title = "rigelia's Portfolio"
+    
     const handleScroll = () => {
       const container = containerRef.current
       const triggerPoint = container.scrollHeight - container.clientHeight - 100 
@@ -44,7 +46,7 @@ function App () {
             <Intro className='self-start w-full md:w-1/2 lg:w-1/3' />
             <BodyText className='w-full md:w-1/2 lg:w-1/3' />
           </div>
-          <div className='h-16'></div> {/* Spacer div with height */}
+          <div className='h-16'></div> 
           <Gallery
             images={imageUrls}
             interval={7500}
