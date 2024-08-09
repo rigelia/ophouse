@@ -36,16 +36,16 @@ html {
 
 .socials-container {
   display: flex;
-  justify-content: center; /* Center the icons horizontally */
-  align-items: center; /* Center the icons vertically */
-  gap: 10px; /* Add some space between the icons */
+  justify-content: center;
+  align-items: center; 
+  gap: 10px; 
 }
 
 .social-link {
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none; 
 }
 
 .social-icon {
-  width: 50px; /* Adjust the size of the icons as needed */
+  width: 50px;
   height: 50px;
 }

@@ -21,7 +21,7 @@ const images = [
 
 const Socials = () => {
   return (
-    <div className='socials-container flex flex-row bg-gray items-left p-4 md:ml-12 lg:ml-24'>
+    <div className='socials-container flex flex-row items-left p-4 md:ml-12 lg:ml-24'>
       {images.map((image, index) => (
         <a key={index} href={image.link} className='social-link'>
           <img src={image.src} alt={image.alt} className='social-icon' />

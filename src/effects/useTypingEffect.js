@@ -36,4 +36,4 @@ const useTypingEffect = (text, speed) => {
   return { displayedText, blink };
 };
 
-export default useTypingEffect; // Export the custom hook
+export default useTypingEffect; 
