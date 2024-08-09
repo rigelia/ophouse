@@ -2,7 +2,7 @@ import React from 'react'
 import useTypingEffect from '../effects/useTypingEffect'
 
 const Intro = () => {
-  const { displayedText = '', blink } = useTypingEffect(' Greetings!', 50)
+  const { displayedText = '', blink } = useTypingEffect('   Greetings!', 50)
 
   const textWithoutLastChar = displayedText.slice(0, -1)
   const lastChar = displayedText.slice(-1)
